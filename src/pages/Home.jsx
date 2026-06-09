@@ -67,7 +67,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 text-center">
-        <p>&copy; 2024 Débora Laranjeira. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Débora Laranjeira. Todos os direitos reservados.</p>
       </footer>
     </div>
   )
