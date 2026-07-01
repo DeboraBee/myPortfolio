@@ -106,8 +106,8 @@ export const translations = {
     projects: {
       title: "Projetos Principais",
       technology: {
-        title: "Projeto de Tecnologia",
-        description: "[Projeto da Faculdade - Detalhes em breve]",
+        title: "Arcangel",
+        description: "Aplicativo de apoio aos professores do Ensino Médio.",
       },
       data: {
         title: "Projeto de Dados",
@@ -256,8 +256,8 @@ export const translations = {
     projects: {
       title: "Main Projects",
       technology: {
-        title: "Technology Project",
-        description: "[College Project - Details coming soon]",
+        title: "Arcangel",
+        description: "App that supports high school teachers.",
       },
       data: {
         title: "Data Project",
@@ -406,8 +406,8 @@ export const translations = {
     projects: {
       title: "Proyectos Principales",
       technology: {
-        title: "Proyecto de Tecnología",
-        description: "[Proyecto de Facultad - Detalles próximamente]",
+        title: "Arcangel",
+        description: "Aplicación de apoyo para profesores de secundaria.",
       },
       data: {
         title: "Proyecto de Datos",
@@ -556,8 +556,8 @@ export const translations = {
     projects: {
       title: "Projets Principaux",
       technology: {
-        title: "Projet Technologique",
-        description: "[Projet Universitaire - Détails à venir]",
+        title: "Arcangel",
+        description: "Application d'accompagnement pour les enseignants du lycée.",
       },
       data: {
         title: "Projet de Données",

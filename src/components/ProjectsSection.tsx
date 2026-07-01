@@ -2,6 +2,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import arcangelLogo from "@/assets/arcangel-logo.png";
 
 export default function ProjectsSection() {
   const { t } = useLanguage();
@@ -11,15 +12,19 @@ export default function ProjectsSection() {
       id: "tech",
       title: t("projects.technology.title"),
       description: t("projects.technology.description"),
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      isPlaceholder: true,
+      tags: ["Flutter", "Dart", "Supabase"],
+      image: arcangelLogo,
+      projectUrl: "https://arcangels.uk/#/login",
+      codeUrl: "https://github.com/Projeto-Arcangel",
     },
     {
       id: "data",
       title: t("projects.data.title"),
       description: t("projects.data.description"),
       tags: ["Python", "SQL", "PowerBI"],
-      isPlaceholder: true,
+      emoji: "📊",
+      projectUrl: null,
+      codeUrl: null,
     },
   ];
 
@@ -42,13 +47,19 @@ export default function ProjectsSection() {
                 key={project.id}
                 className="group relative bg-secondary rounded-xl overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
               >
-                {/* Project Image Placeholder */}
+                {/* Project Image */}
                 <div className="relative w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center overflow-hidden">
-                  <div className="text-center space-y-2">
-                    <div className="text-5xl">
-                      {project.id === "tech" ? "💻" : "📊"}
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-32 h-32 object-contain"
+                    />
+                  ) : (
+                    <div className="text-center space-y-2">
+                      <div className="text-5xl">{project.emoji}</div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
@@ -79,24 +90,43 @@ export default function ProjectsSection() {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3 pt-4">
-                    <Button
-                      size="sm"
-                      className="flex-1"
-                      disabled={project.isPlaceholder}
-                    >
-                      {t("projects.viewProject")}
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </Button>
+                    {project.projectUrl ? (
+                      <a
+                        href={project.projectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
+                        <Button size="sm" className="w-full">
+                          {t("projects.viewProject")}
+                          <ExternalLink className="w-4 h-4 ml-2" />
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button size="sm" className="flex-1" disabled>
+                        {t("projects.viewProject")}
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                    )}
 
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="flex-1"
-                      disabled={project.isPlaceholder}
-                    >
-                      {t("projects.viewCode")}
-                      <Github className="w-4 h-4 ml-2" />
-                    </Button>
+                    {project.codeUrl ? (
+                      <a
+                        href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
+                        <Button size="sm" variant="outline" className="w-full">
+                          {t("projects.viewCode")}
+                          <Github className="w-4 h-4 ml-2" />
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button size="sm" variant="outline" className="flex-1" disabled>
+                        {t("projects.viewCode")}
+                        <Github className="w-4 h-4 ml-2" />
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
