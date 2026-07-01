@@ -1,6 +1,7 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import profilePhoto from "@/assets/debora-profile.jpg";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -96,23 +97,16 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right side - Profile Image Placeholder */}
+          {/* Right side - Profile Image */}
           <div className="relative h-96 md:h-full min-h-96 flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-2xl"></div>
 
             <div className="relative w-full max-w-sm aspect-square">
-              {/* Para adicionar a foto de perfil, troque este bloco por:
-                  <img src={fotoUrl} alt="Débora Laranjeira" className="w-full h-full object-cover rounded-2xl" /> */}
-              <div className="w-full h-full bg-gradient-to-br from-secondary to-secondary/50 rounded-2xl border-2 border-primary/20 flex items-center justify-center overflow-hidden">
-                <div className="text-center space-y-4">
-                  <div className="w-32 h-32 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-5xl">📸</span>
-                  </div>
-                  <p className="text-foreground/60 font-medium">
-                    {t("hero.photoPlaceholder")}
-                  </p>
-                </div>
-              </div>
+              <img
+                src={profilePhoto}
+                alt={t("hero.title")}
+                className="w-full h-full object-cover rounded-2xl border-2 border-primary/20"
+              />
 
               {/* Decorative elements */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>

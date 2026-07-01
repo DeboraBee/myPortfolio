@@ -14,7 +14,6 @@ export const translations = {
       subtitle: "Analista de Dados & Tech Recruiter",
       description: "Transição de carreira para Tecnologia/Dados com 4 anos de experiência em Recrutamento de Tecnologia",
       cta: "Explorar Portfólio",
-      photoPlaceholder: "Sua foto aqui",
     },
     about: {
       title: "Sobre Mim",
@@ -165,7 +164,6 @@ export const translations = {
       subtitle: "Data Analyst & Tech Recruiter",
       description: "Career transition to Technology/Data with 4 years of experience in Technology Recruitment",
       cta: "Explore Portfolio",
-      photoPlaceholder: "Your photo here",
     },
     about: {
       title: "About Me",
@@ -316,7 +314,6 @@ export const translations = {
       subtitle: "Analista de Datos y Reclutadora Tecnológica",
       description: "Transición de carrera a Tecnología/Datos con 4 años de experiencia en Reclutamiento Tecnológico",
       cta: "Explorar Portafolio",
-      photoPlaceholder: "Tu foto aquí",
     },
     about: {
       title: "Acerca de Mí",
@@ -467,7 +464,6 @@ export const translations = {
       subtitle: "Analyste de Données & Recruteur Technologique",
       description: "Transition de carrière vers la Technologie/Données avec 4 ans d'expérience en Recrutement Technologique",
       cta: "Explorer le Portefeuille",
-      photoPlaceholder: "Votre photo ici",
     },
     about: {
       title: "À Propos de Moi",
