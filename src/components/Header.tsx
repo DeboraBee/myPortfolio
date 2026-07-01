@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
+import profilePhoto from "@/assets/debora-profile.jpg";
 
 export default function Header() {
   const { language, changeLanguage, t, availableLanguages } = useLanguage();
@@ -48,9 +49,11 @@ export default function Header() {
       <div className="container flex items-center justify-between py-4">
         {/* Logo/Brand */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">D</span>
-          </div>
+          <img
+            src={profilePhoto}
+            alt="Débora Laranjeira"
+            className="w-8 h-8 rounded-full object-cover border border-primary/20"
+          />
           <span className="font-bold text-lg text-foreground hidden sm:inline">
             Débora
           </span>
