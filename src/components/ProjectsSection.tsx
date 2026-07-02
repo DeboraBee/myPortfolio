@@ -1,11 +1,15 @@
 import { useLanguage } from "@/hooks/useLanguage";
+import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import arcangelLogo from "@/assets/arcangel-logo.png";
+import arcangelLogoDark from "@/assets/arcangel-logo.png";
+import arcangelLogoLight from "@/assets/arcangel-logo-light.png";
+import simuladorRHLogo from "@/assets/simuladorrh-logo.png";
 
 export default function ProjectsSection() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   const projects = [
     {
@@ -13,7 +17,7 @@ export default function ProjectsSection() {
       title: t("projects.technology.title"),
       description: t("projects.technology.description"),
       tags: ["Flutter", "Dart", "Supabase"],
-      image: arcangelLogo,
+      image: theme === "dark" ? arcangelLogoDark : arcangelLogoLight,
       projectUrl: "https://arcangels.uk/#/login",
       codeUrl: "https://github.com/Projeto-Arcangel",
     },
@@ -22,9 +26,9 @@ export default function ProjectsSection() {
       title: t("projects.data.title"),
       description: t("projects.data.description"),
       tags: ["Python", "SQL", "PowerBI"],
-      emoji: "📊",
-      projectUrl: null,
-      codeUrl: null,
+      image: simuladorRHLogo,
+      projectUrl: "https://generationbr.github.io/Projeto-People-Analytics/",
+      codeUrl: "https://github.com/GenerationBR/Projeto-People-Analytics",
     },
   ];
 
@@ -49,17 +53,11 @@ export default function ProjectsSection() {
               >
                 {/* Project Image */}
                 <div className="relative w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center overflow-hidden">
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-32 h-32 object-contain"
-                    />
-                  ) : (
-                    <div className="text-center space-y-2">
-                      <div className="text-5xl">{project.emoji}</div>
-                    </div>
-                  )}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-32 h-32 object-contain"
+                  />
 
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>

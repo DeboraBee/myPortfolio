@@ -110,8 +110,8 @@ export const translations = {
         description: "Aplicativo de apoio aos professores do Ensino Médio.",
       },
       data: {
-        title: "Projeto de Dados",
-        description: "[Projeto do Bootcamp Generation - Detalhes em breve]",
+        title: "SimuladorRH",
+        description: "Consulta de gap salarial e formação por área e cargo",
       },
       viewProject: "Ver Projeto",
       viewCode: "Ver Código",
@@ -260,8 +260,8 @@ export const translations = {
         description: "App that supports high school teachers.",
       },
       data: {
-        title: "Data Project",
-        description: "[Generation Bootcamp Project - Details coming soon]",
+        title: "SimuladorRH",
+        description: "Salary gap and education lookup by field and role",
       },
       viewProject: "View Project",
       viewCode: "View Code",
@@ -410,8 +410,8 @@ export const translations = {
         description: "Aplicación de apoyo para profesores de secundaria.",
       },
       data: {
-        title: "Proyecto de Datos",
-        description: "[Proyecto del Bootcamp Generation - Detalles próximamente]",
+        title: "SimuladorRH",
+        description: "Consulta de brecha salarial y formación por área y puesto",
       },
       viewProject: "Ver Proyecto",
       viewCode: "Ver Código",
@@ -560,8 +560,8 @@ export const translations = {
         description: "Application d'accompagnement pour les enseignants du lycée.",
       },
       data: {
-        title: "Projet de Données",
-        description: "[Projet Bootcamp Generation - Détails à venir]",
+        title: "SimuladorRH",
+        description: "Consultation de l'écart salarial et de la formation par domaine et poste",
       },
       viewProject: "Voir le Projet",
       viewCode: "Voir le Code",
